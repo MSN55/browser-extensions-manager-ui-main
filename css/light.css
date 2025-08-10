@@ -93,7 +93,7 @@ body {
 .content {
     /* background-color: var(--DarkGradient); */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, 260px);
     gap: 10px;
 
 }
