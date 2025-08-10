@@ -1,0 +1,236 @@
+:root {
+    --Neutral900: hsl(227, 75%, 14%);
+    --Neutral800: hsl(226, 25%, 17%);
+    --Neutral700: hsl(225, 23%, 24%);
+    --Neutral600: hsl(226, 11%, 37%);
+    --Neutral300: hsl(0, 0%, 78%);
+    --Neutral200: hsl(217, 61%, 90%);
+    --Neutral100: hsl(0, 0%, 93%);
+    --Neutral0: hsl(200, 60%, 99%);
+
+    --Red400: hsl(3, 86%, 64%);
+    --Red500: hsl(3, 71%, 56%);
+    --Red700: hsl(3, 77%, 44%);
+
+    --LightGradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --DarkGradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+body {
+    background-image: var(--DarkGradient);
+    font-family: "Noto Sans", sans-serif;
+
+}
+
+
+.top {
+    width: 98%;
+    border-radius: 10px;
+    background-color: var(--Neutral800);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    /* margin-left: 1%; */
+    padding: 10px;
+}
+
+.top .logo .text {
+    fill: var(--Neutral0) !important;
+
+}
+
+.top .them {
+    display: block;
+    width: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--Neutral700);
+    cursor: pointer;
+}
+
+.them:hover {
+    border: 1px solid var(--Red500);
+    background-color: var(--Neutral800);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .title {
+    color: var(--Neutral0);
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.buttons {
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.buttons * {
+    border-radius: 15px;
+    color: var(--Neutral0);
+    background-color: var(--Neutral800);
+    border: 0;
+    width: 70px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+
+}
+
+.buttons .selected {
+    background-color: var(--Red500);
+    color: var(--Neutral800);
+    border: 1px solid var(--Neutral600);
+    outline: 1px solid var(--Red500);
+}
+
+.buttons *:hover {
+    border: 1px solid var(--Neutral600);
+    outline: 1px solid var(--Red500);
+
+}
+
+.content {
+    /* background-color: var(--DarkGradient); */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 10px;
+
+}
+
+
+
+
+.content .element {
+    position: relative;
+    background-color: var(--Neutral800);
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.content .element h3 {
+    position: absolute;
+    top: -10px;
+    left: 70px;
+    font-size: 16px;
+    color: var(--Neutral300);
+    font-weight: 500;
+}
+
+.content .element p {
+    position: absolute;
+    left: 70px;
+    top: 10px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: var(--Neutral600);
+    font-weight: 400;
+}
+
+.content .element .icon {
+    width: 50px;
+}
+
+.remove {
+    text-align: center;
+    position: absolute;
+    padding: 5px;
+    left: 15px;
+    bottom: 15px;
+    border-radius: 20px;
+    border: 1px solid var(--Neutral600);
+    font-size: 14px;
+    width: 60px;
+    color: var(--Neutral300);
+    background-color: var(--Neutral800);
+    cursor: pointer;
+}
+
+.remove:hover {
+    background-color: var(--Red500);
+    color: var(--Neutral800);
+    border: 1px solid var(--Neutral600);
+    outline: 1px solid var(--Red500);
+}
+
+.nonActive {
+    text-align: center;
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--Neutral600);
+    font-size: 14px;
+    width: 25px;
+    background-color: var(--Neutral600);
+    cursor: pointer;
+
+}
+
+
+.nonActive::after {
+    display: block;
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--Neutral0);
+}
+
+
+.active {
+    text-align: center;
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--Neutral600);
+    font-size: 14px;
+    width: 25px;
+    background-color: var(--Neutral600);
+    cursor: pointer;
+
+}
+
+.active::before {
+    display: block;
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 13px;
+    background-color: var(--Neutral0);
+}
+
+@media (max-width:767px) {
+    .top {
+        width: 95%;
+    }
+
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+
+
+    }
+
+    .element {
+        margin: 10px 10% 0;
+    }
+
+    .element:last-child {
+        margin-bottom: 30px;
+    }
+
+
+}
