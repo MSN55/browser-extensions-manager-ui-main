@@ -207,6 +207,22 @@ body {
     background-color: var(--Neutral0);
 }
 
+.attribution {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 5%;
+    background-color: var(--Neutral800);
+    height: 30px;
+    color: var(--Neutral0);
+}
+
+.attribution a {
+    text-decoration: none;
+    margin-left: 5px;
+}
+
 @media (max-width:767px) {
     .top {
         width: 95%;
@@ -230,6 +246,13 @@ body {
 
     .element:last-child {
         margin-bottom: 30px;
+    }
+
+    .attribution {
+        margin: 0;
+        width: 100%;
+        font-size: 12px;
+        height: 60px;
     }
 
 
